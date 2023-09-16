@@ -34,11 +34,7 @@ while guessed_number is not 27:
         break
 
 if guessed_number is not 27:
-    not_guessed = []
-
-    for state in data["state"]:
-        if state not in guesssed_states:
-            not_guessed.append(state)
+    not_guessed = [state for state in states if state not in guesssed_states]
 
     state_dict = {
         "State": not_guessed
